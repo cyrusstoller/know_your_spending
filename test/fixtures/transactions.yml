@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  transaction_id: MyString
+  plaid_account_id: MyString
+  category: MyString
+  plaid_category_id: MyString
+  transaction_type: MyString
+  amount: 9.99
+  date_of_transaction: 2017-11-13
+  pending: false
+  location_address: MyString
+  location_city: MyString
+  location_state: MyString
+  location_zip: MyString
+  location_lat: 9.99
+  location_lon: 9.99
+  user_id: 1
+
+two:
+  transaction_id: MyString
+  plaid_account_id: MyString
+  category: MyString
+  plaid_category_id: MyString
+  transaction_type: MyString
+  amount: 9.99
+  date_of_transaction: 2017-11-13
+  pending: false
+  location_address: MyString
+  location_city: MyString
+  location_state: MyString
+  location_zip: MyString
+  location_lat: 9.99
+  location_lon: 9.99
+  user_id: 1

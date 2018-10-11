@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  name: MyString
+  account_id: MyString
+  item_id: MyString
+  institution_id: MyString
+  mask: MyString
+  official_name: MyString
+  account_type: MyString
+  account_subtype: MyString
+
+two:
+  user_id: 1
+  name: MyString
+  account_id: MyString
+  item_id: MyString
+  institution_id: MyString
+  mask: MyString
+  official_name: MyString
+  account_type: MyString
+  account_subtype: MyString

@@ -1,0 +1,16 @@
+<nav class="db dt-l w-100 border-box pa3 ph5-l bg-light-green">
+  <%= link_to root_path, class: "f3 db dtc-l v-mid near-black link dim w-100 w-40-l tc tl-l mb2 mb0-l", :"data-turbolinks" => false do %>
+    Do you know your spending?
+  <% end %>
+  <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+    <% if current_user %>
+      <%= link_to edit_user_registration_path, class: "link dim near-black f6 f5-l dib mr3 mr4-l" do %>
+        Hi, <%= current_user.email %>
+      <% end %>
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "link dim near-black f6 f5-l dib mr3" %>
+    <% else %>
+      <%= link_to "Sign In", new_user_session_path, class: "link dim near-black f6 f5-l dib mr3 mr4-l" %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "link dim near-black f6 f5-l dib mr3" %>
+    <% end %>
+  </div>
+</nav>

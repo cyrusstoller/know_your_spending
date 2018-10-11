@@ -1,0 +1,97 @@
+<%= form_with(model: transaction, local: true) do |form| %>
+  <% if transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+
+      <ul>
+      <% transaction.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :transaction_id %>
+    <%= form.text_field :transaction_id, id: :transaction_transaction_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plaid_account_id %>
+    <%= form.text_field :plaid_account_id, id: :transaction_plaid_account_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_field :category, id: :transaction_category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plaid_category_id %>
+    <%= form.text_field :plaid_category_id, id: :transaction_plaid_category_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transaction_type %>
+    <%= form.text_field :transaction_type, id: :transaction_transaction_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.text_field :amount, id: :transaction_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_of_transaction %>
+    <%= form.date_select :date_of_transaction, id: :transaction_date_of_transaction %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pending %>
+    <%= form.check_box :pending, id: :transaction_pending %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location_address %>
+    <%= form.text_field :location_address, id: :transaction_location_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location_city %>
+    <%= form.text_field :location_city, id: :transaction_location_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location_state %>
+    <%= form.text_field :location_state, id: :transaction_location_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location_zip %>
+    <%= form.text_field :location_zip, id: :transaction_location_zip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location_lat %>
+    <%= form.text_field :location_lat, id: :transaction_location_lat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location_lon %>
+    <%= form.text_field :location_lon, id: :transaction_location_lon %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id, id: :transaction_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :transaction_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

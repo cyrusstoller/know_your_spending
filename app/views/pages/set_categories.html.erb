@@ -1,0 +1,32 @@
+<div class="center mw8 mw6-ns hidden mv4">
+  <h2>Set categories</h2>
+
+  <p class="measure">
+    For this last step, we need to know which types of transactions
+    you would like to be tested on.
+  </p>
+
+  <%= form_tag({controller: :pages, action: "select_categories"}, {class: "form measure"}) do %>
+    <div>
+      <% @categories.each_with_index do |category, index| %>
+        <% if category.plaid_id[3] != "X" and category.plaid_id[6] == "X" %>
+          <div class="pb2 pl4">
+        <% else %>
+          <div class="pb2">
+        <% end %>
+
+          <%= label_tag "check_box_#{index}" do %>
+            <%= check_box_tag 'categories[ids][]', category.id, @no_ids || @current_categories.include?(category), 
+                id: "check_box_#{index}" %>
+            <span><%= category.name %></span>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <br>
+    <div class="">
+      <%= submit_tag  "All set",
+        class: "b ph3 pv2 input-reset ba b--black bg-black white grow pointer f6 dib br0" %>
+    </div>
+  <% end -%>
+</div>
